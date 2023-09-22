@@ -3,16 +3,10 @@ import React, { useEffect } from 'react';
 
 import AuthNavigationStack from './authNavigationStack';
 import MainNavigationStack from './mainNavigationStack';
-import Loading from '../components/loading';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
-import {
-  authAction,
-  loadingSelector,
-  tokenSelector,
-} from '../redux/slices/authSlice';
+import { authAction, tokenSelector } from '../redux/slices/authSlice';
 
 const RootNavigationStack = () => {
-  const isLoading = useAppSelector(loadingSelector);
   const isLogin = useAppSelector(tokenSelector);
   const dispatch = useAppDispatch();
 
@@ -20,9 +14,7 @@ const RootNavigationStack = () => {
     dispatch(authAction.checkLogin());
   }, []);
 
-  return isLoading ? (
-    <Loading />
-  ) : (
+  return (
     <NavigationContainer>
       {isLogin && <MainNavigationStack />}
       {!isLogin && <AuthNavigationStack />}

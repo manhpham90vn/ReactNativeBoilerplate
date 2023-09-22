@@ -61,7 +61,6 @@ const Home = (props: Props) => {
       queryParameters: { page: 1, sort: 'ascending' },
     };
     dispatch(homeAction.init(payload));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

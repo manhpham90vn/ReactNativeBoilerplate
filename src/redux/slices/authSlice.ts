@@ -55,6 +55,9 @@ const authSlice = createSlice({
       state.errorMessage =
         action.payload.errorData?.message ?? action.payload.errorMessage;
     },
+    resetMessage: (state: AuthState) => {
+      state.errorMessage = null;
+    },
     logout: () => initialState,
   },
 });

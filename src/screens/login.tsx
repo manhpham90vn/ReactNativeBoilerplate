@@ -36,6 +36,9 @@ const Login = () => {
       Alert.alert('Error', error, [
         {
           text: 'OK',
+          onPress: () => {
+            dispatch(authAction.resetMessage());
+          },
         },
       ]);
     }
