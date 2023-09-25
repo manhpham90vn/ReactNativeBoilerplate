@@ -7,7 +7,7 @@
     "icon": "./assets/images/1024x1024.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/images/1084x2778.png",
+      "image": "./assets/images/1284x2778.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -20,7 +20,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/1084x2778.png",
+        "foregroundImage": "./assets/images/1284x2778.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.manhpham90vn.reactNativeBoilerplate"
