@@ -20,7 +20,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/1284x2778.png",
+        "foregroundImage": "./assets/images/1024x1024.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.manhpham90vn.reactNativeBoilerplate"
