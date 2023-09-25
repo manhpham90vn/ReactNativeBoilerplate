@@ -1,15 +1,34 @@
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { useCallback } from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 
 import RootNavigationStack from './src/navigations/rootNavigationStack';
 import { store } from './src/redux/store';
-import Example1 from './src/screens/example1';
-import Example2 from './src/screens/example2';
+
+SplashScreen.preventAutoHideAsync();
 
 const App = () => {
-  return <Example2 />;
+  const [fontsLoaded, fontError] = useFonts({
+    Montserrat: require('./assets/fonts/Montserrat-Regular.ttf'),
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded || fontError) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded, fontError]);
+
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
+
   return (
     <Provider store={store}>
-      <RootNavigationStack />
+      <SafeAreaProvider onLayout={onLayoutRootView}>
+        <RootNavigationStack />
+      </SafeAreaProvider>
     </Provider>
   );
 };

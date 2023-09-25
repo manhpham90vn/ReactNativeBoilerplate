@@ -3,9 +3,6 @@ import { useState } from 'react';
 import {
   FlatList,
   Keyboard,
-  Platform,
-  SafeAreaView,
-  StatusBar,
   Text,
   TextInput,
   TouchableOpacity,
@@ -96,10 +93,9 @@ const Example1 = () => {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <SafeAreaView
+      <View
         style={{
           flex: 1,
-          paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
           paddingLeft: 20,
           paddingRight: 20,
           justifyContent: 'space-between',
@@ -198,7 +194,7 @@ const Example1 = () => {
             </Text>
           </TouchableOpacity>
         </View>
-      </SafeAreaView>
+      </View>
     </GestureHandlerRootView>
   );
 };

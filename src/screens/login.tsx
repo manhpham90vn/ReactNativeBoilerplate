@@ -16,6 +16,7 @@ import {
   errorSelector,
   loadingSelector,
 } from '../redux/slices/authSlice';
+import { defaultFont } from '../resources/fonts';
 
 const Login = () => {
   const [user, setUser] = useState<string>('');
@@ -75,6 +76,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'aliceblue',
   },
   input: {
+    ...defaultFont,
+    fontSize: 18,
     height: 40,
     borderWidth: 0.5,
     borderColor: 'black',
@@ -83,7 +86,9 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   button: {
-    height: 40,
+    ...defaultFont,
+    fontSize: 20,
+    height: 50,
     padding: 10,
     margin: 10,
     alignSelf: 'center',

@@ -17,6 +17,7 @@ import {
   loadingSelector,
   userSelector,
 } from '../redux/slices/homeSlice';
+import { defaultFont } from '../resources/fonts';
 
 type Props = {
   navigation: any;
@@ -25,8 +26,8 @@ type Props = {
 const Item = (item: UserListResponse) => {
   return (
     <View style={styles.item}>
-      <Text>{item.name}</Text>
-      <Text>{item.website}</Text>
+      <Text style={{ ...defaultFont }}>{item.name}</Text>
+      <Text style={{ ...defaultFont }}>{item.website}</Text>
     </View>
   );
 };
@@ -72,7 +73,7 @@ const Home = (props: Props) => {
             logout();
           }}
         >
-          <Text>Logout</Text>
+          <Text style={{ ...defaultFont }}>Logout</Text>
         </TouchableOpacity>
       ),
       headerLeft: () => (
@@ -84,7 +85,7 @@ const Home = (props: Props) => {
             dispatch(homeAction.init(payload));
           }}
         >
-          <Text>Reload</Text>
+          <Text style={{ ...defaultFont }}>Reload</Text>
         </TouchableOpacity>
       ),
     });

@@ -4,10 +4,10 @@
     "slug": "reactNativeBoilerplate",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/1024x1024.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/1084x2778.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -20,13 +20,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/1084x2778.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.manhpham90vn.reactNativeBoilerplate"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/1084x2778.png"
     },
     "extra": {
       "eas": {
