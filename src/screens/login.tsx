@@ -7,16 +7,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-
-import Loading from '../components/loading';
-import { LoginRequest } from '../data/apis/loginApi';
-import { useAppDispatch, useAppSelector } from '../redux/hooks';
+import Loading from 'src/components/loading';
+import { LoginRequest } from 'src/data/apis/loginApi';
+import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
 import {
   authAction,
   errorSelector,
   loadingSelector,
-} from '../redux/slices/authSlice';
-import { defaultFont } from '../resources/fonts';
+} from 'src/redux/slices/authSlice';
+import { defaultFont } from 'src/resources/fonts';
 
 const Login = () => {
   const [user, setUser] = useState<string>('');

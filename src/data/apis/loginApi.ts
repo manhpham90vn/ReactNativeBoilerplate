@@ -1,5 +1,5 @@
-import { PostRequest, Request } from './client';
-import AppError from '../../common/appError';
+import AppError from 'src/common/appError';
+import { PostRequest, Request } from 'src/data/apis/client';
 
 export interface LoginRequest extends Request {
   body: {

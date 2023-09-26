@@ -1,13 +1,9 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { call, put, takeLatest } from 'redux-saga/effects';
+import AppError from 'src/common/appError';
+import { LoginApi, LoginRequest, LoginResponse } from 'src/data/apis/loginApi';
+import { clearToken, getToken, setToken } from 'src/data/local/localData';
 
-import AppError from '../../common/appError';
-import {
-  LoginApi,
-  LoginRequest,
-  LoginResponse,
-} from '../../data/apis/loginApi';
-import { clearToken, getToken, setToken } from '../../data/local/localData';
 import { authAction } from '../slices/authSlice';
 
 function* Login(action: PayloadAction<LoginRequest>) {

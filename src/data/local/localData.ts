@@ -1,10 +1,10 @@
+import { LoginResponse } from 'src/data/apis/loginApi';
 import {
   clearObjectData,
   getObjectData,
   StorageConstants,
   storeObjectData,
-} from './asyncStorage';
-import { LoginResponse } from '../apis/loginApi';
+} from 'src/data/local/asyncStorage';
 
 export const getToken = async (): Promise<LoginResponse> => {
   try {

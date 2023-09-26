@@ -1,8 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-
-import { defaultFont } from '../resources/fonts';
-import Home from '../screens/home';
+import { defaultFont } from 'src/resources/fonts';
+import Home from 'src/screens/home';
 
 const Stack = createNativeStackNavigator();
 

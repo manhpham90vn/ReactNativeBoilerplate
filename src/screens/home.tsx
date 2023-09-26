@@ -6,18 +6,17 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-
-import Loading from '../components/loading';
-import { ListRequest, UserListResponse } from '../data/apis/listApi';
-import { useAppDispatch, useAppSelector } from '../redux/hooks';
-import { authAction } from '../redux/slices/authSlice';
+import Loading from 'src/components/loading';
+import { ListRequest, UserListResponse } from 'src/data/apis/listApi';
+import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
+import { authAction } from 'src/redux/slices/authSlice';
 import {
   homeAction,
   listSelector,
   loadingSelector,
   userSelector,
-} from '../redux/slices/homeSlice';
-import { defaultFont } from '../resources/fonts';
+} from 'src/redux/slices/homeSlice';
+import { defaultFont } from 'src/resources/fonts';
 
 type Props = {
   navigation: any;

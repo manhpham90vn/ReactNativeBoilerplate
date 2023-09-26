@@ -36,5 +36,8 @@ module.exports = ({ config }: ConfigContext): ExpoConfig => {
       },
     },
     owner: 'manhpham90vn',
+    experiments: {
+      tsconfigPaths: true,
+    },
   };
 };
