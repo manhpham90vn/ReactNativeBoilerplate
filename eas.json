@@ -16,9 +16,24 @@
       "android": {
         "buildType": "apk",
         "gradleCommand": ":app:assembleRelease"
+      },
+      "env": {
+        "APP_NAME": "RN Stg",
+        "VERSION_NAME": "1.0.0",
+        "VERSION_CODE": "1",
+        "BASE_URL": "http://192.168.100.46:3000/",
+        "DEBUG": "false"
       }
     },
-    "prod": {}
+    "prod": {
+      "env": {
+        "APP_NAME": "RN Prod",
+        "VERSION_NAME": "1.0.0",
+        "VERSION_CODE": "1",
+        "BASE_URL": "http://192.168.100.46:3000/",
+        "DEBUG": "false"
+      }
+    }
   },
   "submit": {
     "production": {}
