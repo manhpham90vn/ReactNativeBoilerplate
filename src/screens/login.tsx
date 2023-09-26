@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native';
 import Loading from 'src/components/loading';
+import Configs from 'src/constants/configs';
 import { LoginRequest } from 'src/data/apis/loginApi';
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
 import {
@@ -15,7 +16,6 @@ import {
   errorSelector,
   loadingSelector,
 } from 'src/redux/slices/authSlice';
-import { defaultFont } from 'src/resources/fonts';
 
 const Login = () => {
   const [user, setUser] = useState<string>('');
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'aliceblue',
   },
   input: {
-    ...defaultFont,
+    ...Configs.Fonts,
     fontSize: 18,
     height: 40,
     borderWidth: 0.5,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   button: {
-    ...defaultFont,
+    ...Configs.Fonts,
     fontSize: 20,
     height: 50,
     padding: 10,

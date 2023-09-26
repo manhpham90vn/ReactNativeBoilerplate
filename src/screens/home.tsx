@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native';
 import Loading from 'src/components/loading';
+import Configs from 'src/constants/configs';
 import { ListRequest, UserListResponse } from 'src/data/apis/listApi';
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
 import { authAction } from 'src/redux/slices/authSlice';
@@ -16,7 +17,6 @@ import {
   loadingSelector,
   userSelector,
 } from 'src/redux/slices/homeSlice';
-import { defaultFont } from 'src/resources/fonts';
 
 type Props = {
   navigation: any;
@@ -25,8 +25,8 @@ type Props = {
 const Item = (item: UserListResponse) => {
   return (
     <View style={styles.item}>
-      <Text style={{ ...defaultFont }}>{item.name}</Text>
-      <Text style={{ ...defaultFont }}>{item.website}</Text>
+      <Text style={{ ...Configs.Fonts }}>{item.name}</Text>
+      <Text style={{ ...Configs.Fonts }}>{item.website}</Text>
     </View>
   );
 };
@@ -72,7 +72,7 @@ const Home = (props: Props) => {
             logout();
           }}
         >
-          <Text style={{ ...defaultFont }}>Logout</Text>
+          <Text style={{ ...Configs.Fonts }}>Logout</Text>
         </TouchableOpacity>
       ),
       headerLeft: () => (
@@ -84,7 +84,7 @@ const Home = (props: Props) => {
             dispatch(homeAction.init(payload));
           }}
         >
-          <Text style={{ ...defaultFont }}>Reload</Text>
+          <Text style={{ ...Configs.Fonts }}>Reload</Text>
         </TouchableOpacity>
       ),
     });

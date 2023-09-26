@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { defaultFont } from 'src/resources/fonts';
+import Configs from 'src/constants/configs';
 import Home from 'src/screens/home';
 
 const Stack = createNativeStackNavigator();
@@ -10,7 +10,7 @@ const MainNavigationStack = () => {
     <Stack.Navigator
       screenOptions={{
         headerTitleAlign: 'center',
-        headerTitleStyle: { ...defaultFont },
+        headerTitleStyle: { ...Configs.Fonts },
       }}
     >
       <Stack.Screen name='Home' component={Home} />
