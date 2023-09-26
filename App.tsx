@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import RootNavigationStack from 'src/navigations/rootNavigationStack';
 import { store } from 'src/redux/store';
 
-SplashScreen.preventAutoHideAsync();
+SplashScreen.preventAutoHideAsync().then();
 
 const App = () => {
   const [fontsLoaded, fontError] = useFonts({
