@@ -1,10 +1,10 @@
 import axios, { AxiosInstance } from 'axios';
-import AppData from 'src/common/appData';
-import AppError from 'src/common/appError';
-import { Constants } from 'src/constants/configs';
+import Configs from 'src/constants/configs';
 import { authAction } from 'src/redux/slices/authSlice';
 import { homeAction } from 'src/redux/slices/homeSlice';
 import { store } from 'src/redux/store';
+import AppData from 'src/types/appData';
+import AppError from 'src/types/appError';
 
 export interface Request {
   queryParameters?: object;
@@ -18,8 +18,8 @@ export interface Response<T> extends AppData<T> {
 
 const Client = (): AxiosInstance => {
   const client: AxiosInstance = axios.create({
-    baseURL: Constants.BASE_URL,
-    timeout: Constants.TIME_OUT,
+    baseURL: Configs.Constants.BASE_URL,
+    timeout: Configs.Constants.TIME_OUT,
     headers: {
       Accept: 'application/json',
     },

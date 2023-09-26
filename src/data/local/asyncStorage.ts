@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import AppError from 'src/common/appError';
+import AppError from 'src/types/appError';
 
 export const StorageConstants = Object.freeze({
   TOKEN: 'token',

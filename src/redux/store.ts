@@ -1,13 +1,13 @@
 import createSagaMiddleware from '@redux-saga/core';
 import { configureStore, Middleware, Store } from '@reduxjs/toolkit';
-import { Constants } from 'src/constants/configs';
+import Configs from 'src/constants/configs';
 import rootReducer from 'src/redux/rootReducer';
 import rootSaga from 'src/redux/rootSaga';
 
 const sagaMiddleware = createSagaMiddleware();
 const middlewares: Middleware[] = [sagaMiddleware];
 
-if (Constants.DEBUG && Constants.LOG_STATE) {
+if (Configs.Constants.DEBUG && Configs.Constants.LOG_STATE) {
   const logger: Middleware = (store) => (next) => (action) => {
     console.group(action.type);
     console.log(
@@ -35,7 +35,7 @@ export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(middlewares),
-  devTools: Constants.DEBUG,
+  devTools: Configs.Constants.DEBUG,
 });
 
 sagaMiddleware.run(rootSaga);
