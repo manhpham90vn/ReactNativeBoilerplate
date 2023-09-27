@@ -1,13 +1,13 @@
 # React Native Boilerplate
 ## Tech Stack
-- TypeScript
+- [TypeScript](https://www.typescriptlang.org/)
+- [Expo](https://expo.dev/)
 - [Redux](https://redux.js.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [React Redux](https://react-redux.js.org/)
 - [Redux-Saga](https://redux-saga.js.org/)
 - [Axios](https://axios-http.com/docs/intro)
 - [Async Storage](https://github.com/react-native-async-storage/async-storage)
-- [Expo](https://expo.dev/)
 - [React Navigation](https://reactnavigation.org/)
 - [EAS](https://docs.expo.dev/build/introduction/)
 

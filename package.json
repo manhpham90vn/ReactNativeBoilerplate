@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "npx expo start",
+    "start": "npx expo start --clear",
     "ios_stg": "eas build --platform ios --profile stg",
     "android_stg": "eas build --platform android --profile stg",
     "ios_prod": "eas build --platform ios --profile prod",
     "android_prod": "eas build --platform android --profile prod",
     "lint": "eslint .",
-    "doctor": "npx expo-doctor"
+    "doctor": "npx expo-doctor",
+    "cache": "rm -rf node_modules && npm cache clean -f && yarn cache clean"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.3",
